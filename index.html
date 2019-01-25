@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trust game example. Lottery</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="container">
+
+    <!-- Tutorial here -->
+    <div class="row" id="tutorial">
+        <p>Hello world, here is some game tutorial</p>
+        <button onclick="goToState('game')">Start game</button>
+    </div>
+
+    <!-- Game here -->
+    <div class="row" id="game">
+        <p>You have <span class="money">0</span>$</p>
+        <p>How many you want to give</p>
+        <p>Money to give: <span class="given-money">0</span></p>
+        <input type="range" value="0" min="0" max="10" step="1" class="form-control-range"
+           onchange="onSliderChange(this.value)"
+           oninput="onSliderChange(this.value)"
+        />
+        <button onclick="calculateProfit()">Send</button>
+    </div>
+
+    <!-- End game here -->
+    <div class="row" id="gameover">
+        <p>You total money after the win is <span class="money">0</span>$</p>
+        <button onclick="goToState('tutorial')">Restart</button>
+    </div>
+
+</body>
+</html>

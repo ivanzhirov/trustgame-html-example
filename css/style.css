@@ -1,0 +1,38 @@
+/*********************/
+/* Game generic styles */
+/*********************/
+.container {
+    /* Setup game container styles */
+    width: 500px;
+    margin-top: 50px;
+    padding: 25px;
+    border: 1px solid lightblue;
+}
+
+p {
+    /* Outer bottom extra space */
+    margin-bottom:15px;
+}
+
+input[type='range'] {
+  /* Outer top and bottom extra space */
+  margin: 20px 0;
+}
+
+/*********************/
+/* Game blocks style */
+/*********************/
+#tutorial {
+    /* Not necessary because block is default */
+    display: block;
+}
+
+#game {
+    /* Hide block that doesnt use in game start */
+    display: none;
+}
+
+#gameover {
+    /* Hide block that doesnt use in game start */
+    display: none;
+}
