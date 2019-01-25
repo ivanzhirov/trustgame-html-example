@@ -82,8 +82,11 @@ function calculateProfit() {
   const resultMoney = moneyToGive * randomMultiplier;
 
   // Calculate the whole money what user has got from lottery
-  moneyHave = restMoney + resultMoney;
+  return restMoney + resultMoney;
+}
 
+function calculateProfitAndQuit() {
+  moneyHave = calculateProfit();
   // Moving to gameover state
   goToState('gameover')
 }
