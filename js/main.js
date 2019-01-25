@@ -91,7 +91,7 @@ function calculateProfit() {
 
 function onSliderChange(val) {
   //
-  // On range slider change re-render values on user money data
+  // onChange event re-render values based on current range slider value
   //
   $('#game .money').text(moneyHave - val);
   $('#game .given-money').text(val);
